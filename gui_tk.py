@@ -24,10 +24,8 @@ def helloButton():
     pass
 
 
-def helloButton1():
-    global s
-    s += 1
-    li.append(s)
+def monkey():
+
 ##
 #
 # c = tkinter.Button(root, text='增加', bg='#B8B8B8', command=helloButton1)
@@ -50,7 +48,8 @@ jg_ac.current(0)
 
 # 按钮文本配置
 ks = tkinter.Button(root, text='开始测试', bg='#B8B8B8')  # 性能测试‘开始按钮’
-csb = tkinter.Button(root, text='启动测试', bg='#B8B8B8')  # 性能测试‘开始按钮’
+csb = tkinter.Button(root, text='启动测试', bg='#B8B8B8')  # 启动时间测试‘开始按钮’
+monkeyb = tkinter.Button(root, text='启动Monkey测试', bg='#B8B8B8', command=monkey)  # Monkey测试‘开始按钮’
 
 # 输入文本配置
 baoi_win = tkinter.Entry(root, width=30)  # 性能测试‘包名’输入框
@@ -89,7 +88,8 @@ canvas.create_window(890, 560, window=jg_ac)  # Mokey测试‘时间间隔’按
 
 # 按钮布局
 canvas.create_window(400, 270, window=ks)  # 性能测试‘开始测试’按钮布局
-canvas.create_window(400, 440, window=csb)  # 性能测试‘开始测试’按钮布局
+canvas.create_window(400, 440, window=csb)  # 启动时间‘启动测试’按钮布局
+canvas.create_window(400, 670, window=monkeyb)  # Monkey‘启动测试’按钮布局
 
 # 文字控件布局
 canvas.create_window(400, 20, window=xn)  # 性能测试文字布局
