@@ -4,7 +4,7 @@
 # author: "Lei Yong" 
 # creation time: 2017/7/12 0012 21:36
 # Email: leiyong711@163.com
-
+import os
 import tkinter
 from tkinter import ttk
 
@@ -25,8 +25,12 @@ def helloButton():
 
 
 def monkey():
-    pass
-##
+    ti = jg_ac.get()
+    packname = monkeybao_win.get()
+    sl = monkeysl_win.get()
+    print('包名：%s 随机次数：%s 时间间隔：%s' % (packname, sl, ti))
+    os.popen('adb shell monkey -p %s -s %s -v %s' % (packname, ti, sl))
+
 #
 # c = tkinter.Button(root, text='增加', bg='#B8B8B8', command=helloButton1)
 # s = tkinter.Label(root, text='显示', bg='blue')
@@ -104,7 +108,7 @@ canvas.create_window(450, 340, window=qActivitylabel)  # 启动时间测试‘�
 canvas.create_window(830, 340, window=qnumlabel)  # 启动时间测试‘测试次数’文字布局
 canvas.create_window(70, 440, window=qdslabel)  # 启动时间测试‘启动时间展示’文字布局
 canvas.create_window(400, 520, window=monkeylabel)  # Monkey测试文字布局
-canvas.create_window(80, 560, window=monkeybaolabel)  # Monkey测试‘测试包名’文字布局
+canvas.create_window(70, 560, window=monkeybaolabel)  # Monkey测试‘测试包名’文字布局
 canvas.create_window(450, 560, window=monkeyslabel)  # Monkey测试‘随机种子数量’文字布局
 canvas.create_window(830, 560, window=monkeytilabel)  # Monkey测试‘种子间隔’文字布局
 
