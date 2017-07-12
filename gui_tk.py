@@ -25,7 +25,7 @@ def helloButton():
 
 
 def monkey():
-
+    pass
 ##
 #
 # c = tkinter.Button(root, text='增加', bg='#B8B8B8', command=helloButton1)
